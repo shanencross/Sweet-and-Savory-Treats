@@ -19,7 +19,7 @@ else
   @foreach (FlavorTreat flavorTreat in Model.FlavorTreats)
   {
     Treat treat = flavorTreat.Treat;
-    <li>@Html.ActionLink(treat.Name, "Details", "Flavors", new { id = treat.TreatId })</li>
+    <li>@Html.ActionLink(treat.Name, "Details", "Treats", new { id = treat.TreatId })</li>
   }
 </ul>
 <br>
