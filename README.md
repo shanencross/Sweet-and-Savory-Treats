@@ -35,6 +35,10 @@ Features:
 * Install git
 * Install the [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 * Install [MySQL](https://dev.mysql.com/downloads/mysql/) and create a server with a password of your choosing
+* Install the dotnet ef tool for Entity Framework globally by entering the following command in your console:
+```
+dotnet tool install --global dotnet-ef
+```
 
 ### Installing Application
 * Use ```git clone``` to download this repository to a local directory
