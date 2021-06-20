@@ -1,4 +1,4 @@
-# Library
+# Pierre's Sweet and Savory Treats
 
 #### Website that markets treats - learning project for Epicodus course for practice with authentication, many-to-many relationships, and databases
 
