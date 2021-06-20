@@ -108,5 +108,14 @@ namespace SweetAndSavoryTreats.Controllers
       _db.SaveChanges();
       return RedirectToAction("Details", new { id=treat.TreatId });
     }
+
+    [HttpPost]
+    public ActionResult RemoveFlavor(int treatId, int flavorTreatId)
+    {
+      FlavorTreat thisFlavorTreat = _db.FlavorTreats.FirstOrDefault(flavorTreat => flavorTreat.FlavorTreatId == flavorTreatId);
+      _db.FlavorTreats.Remove(thisFlavorTreat);
+      _db.SaveChanges();
+      return RedirectToAction("Details", new { id=treatId });
+    }
   }
 }
