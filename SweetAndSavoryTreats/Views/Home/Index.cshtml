@@ -1,0 +1,48 @@
+@{
+  Layout = "_Layout";
+}
+@using SweetAndSavoryTreats.Models;
+
+<h1>Pierre's Sweet and Savory Treats</h1>
+<p>Here at Pierre's Sweet and Savory Treats, we have offer many treats of many flavors! Come see for yourself!</p>
+
+@if (User.Identity.IsAuthenticated)
+{
+  <p>Welcome, @User.Identity.Name!</p>
+  <p>@Html.ActionLink("Add Treat", "Create", "Treats")<br>
+  @Html.ActionLink("Add Flavor", "Create", "Flavors")<br>
+  @using (Html.BeginForm("LogOff", "Account"))
+  {
+    <input type="submit" class="btn btn-primary " value="Log Out" />
+  }
+  </p>
+}
+else
+{
+  <p>@Html.ActionLink("Register or Log In", "Index", "Account")</p>
+}
+
+<h2>@Html.ActionLink("Treats", "Index", "Treats")</h2>
+@if (ViewBag.Treats.Count == 0)
+{
+  <p>What?? We don't have any treats?! Someone register and add some new ones, quick!</p>
+}
+<ul>
+@foreach (Treat treat in ViewBag.Treats)
+{
+  <li>@Html.ActionLink(treat.Name, "Details", "Treats", new { id = treat.TreatId })</li>
+}
+</ul>
+
+<h2>@Html.ActionLink("Flavors", "Index", "Flavors")</h2>
+@if (ViewBag.Flavors.Count == 0)
+{
+  <p>We don't have any flavors?? A registered user better add some quick!</p>
+}
+<ul>
+@foreach (Flavor flavor in ViewBag.Flavors)
+{
+  <li>@Html.ActionLink(flavor.Name, "Details", "Flavors", new { id = flavor.FlavorId })</li>
+}
+</ul>
+<br>
