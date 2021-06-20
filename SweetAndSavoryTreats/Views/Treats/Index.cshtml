@@ -15,15 +15,6 @@
   @foreach (Treat treat in Model)
   {
     <li>@Html.ActionLink(treat.Name, "Details", new { id = treat.TreatId }): $@treat.Price.ToString("F2")</li>
-    <li> Flavors:
-      <ul>
-        @foreach (FlavorTreat flavorTreat in treat.FlavorTreats)
-        {
-          Flavor flavor = flavorTreat.Flavor;
-          <li>@Html.ActionLink(flavor.Name, "Details", "Flavors", new { id = flavor.FlavorId })</li>
-        }
-      </ul>
-    </li>
   }
 </ul>
 <br>
