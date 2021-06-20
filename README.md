@@ -39,7 +39,7 @@ Features:
 ### Installing Application
 * Use ```git clone``` to download this repository to a local directory
 * Navigate to this local directory in your terminal
-* Navigate to the ```/Library``` folder in your terminal
+* Navigate to the ```/SweetAndSavoryTreats``` folder in your terminal
 * Enter ```dotnet restore``` to install packages
 * Enter ```touch appsettings.json``` to create an appsettings file.
 * Open appsettings.json with a text editor and enter the following, replacing \[PASSWORD\] with your chosen server password:
@@ -52,7 +52,7 @@ Features:
 ```
 
 ### Generating Database
-* If you aren't there already, navigate to the ```/Library``` subfolder in your terminal
+* If you aren't there already, navigate to the ```/SweetAndSavoryTreats``` subfolder in your terminal
 * Enter the following to generate the database using the migration:
 ```
 dotnet ef database update
