@@ -8,7 +8,14 @@
 <h1>@Model.Name</h1>
 <h3>Price: $@Model.Price.ToString("F2")</h3>
 
-<h3>Flavors</h3>
+@if (Model.FlavorTreats.Count == 0)
+{
+  <p>This treat has no flavors added yet.</p>
+}
+else
+{
+  <h3>Flavors</h3>
+}
 <ul>
   @foreach (FlavorTreat flavorTreat in Model.FlavorTreats)
   {

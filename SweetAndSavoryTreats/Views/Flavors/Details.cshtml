@@ -7,7 +7,14 @@
 
 <h1>@Model.Name</h1>
 
-<h3>Treats</h3>
+@if (Model.FlavorTreats.Count == 0)
+{
+  <p>This treat has no flavors added yet.</p>
+}
+else
+{
+  <h3>Treats</h3>
+}
 <ul>
   @foreach (FlavorTreat flavorTreat in Model.FlavorTreats)
   {
