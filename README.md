@@ -63,6 +63,14 @@ dotnet ef database update
 * The terminal will output that it is "Now listening on" a certain URL. For me this is ```http://localhost:5000```, but it could be different.
 * Navigate in your web browser to whatever URL is displayed. This will show the home page.
 
+### Instructions
+
+* Anyone can view the treats and flavors! But for more functionality, you'll need to register an account. 
+* Click the "Register or Login" button, then click on "Register".
+* Enter your email and desired password and submit the form.
+* Now navigate to the "Log in" and enter the same email and password.
+* Now return to the home page. There will be new links available that allow you to add and modify flavors and treats. Enjoy!
+
 ## Known Bugs
 
 None.
