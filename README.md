@@ -68,7 +68,7 @@ dotnet ef database update
 * Anyone can view the treats and flavors! But for more functionality, you'll need to register an account. 
 * Click the "Register or Login" button, then click on "Register".
 * Enter your email and desired password and submit the form.
-* Now navigate to the "Log in" and enter the same email and password.
+* Now navigate to the "Log In" and enter the same email and password.
 * Now return to the home page. There will be new links available that allow you to add and modify flavors and treats. Enjoy!
 * You can also log out anytime with the "Log Out" option on the home page.
 * If you do, you'll need to sign in again with the same email/password to continue using the additional functionality!
