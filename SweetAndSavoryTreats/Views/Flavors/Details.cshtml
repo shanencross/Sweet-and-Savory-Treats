@@ -27,7 +27,7 @@ else
 @if (User.Identity.IsAuthenticated)
 {
   @Html.ActionLink("Edit Flavor", "Edit", new { id = Model.FlavorId })<br>
-  @Html.ActionLink("Delete Flavor", "Delete")<br>
+  @Html.ActionLink("Delete Flavor", "Delete", new { id = Model.FlavorId })<br>
 }
 @Html.ActionLink("View Flavors", "Index")<br>
 @Html.ActionLink("Return to Home", "Index", "Home")
