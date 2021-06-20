@@ -22,12 +22,14 @@ else
     Flavor flavor = flavorTreat.Flavor;
     <li>
       @Html.ActionLink(flavor.Name, "Details", "Flavors", new { id = flavor.FlavorId })
-
-      @using (Html.BeginForm("RemoveFlavor", "Treats"))  
+      @if (User.Identity.IsAuthenticated)
       {
-        @Html.Hidden("treatId", flavorTreat.TreatId)
-        @Html.Hidden("flavorTreatId", flavorTreat.FlavorTreatId);
-        <input type="submit" value="Remove Flavor" class="btn btn-danger" />
+        @using (Html.BeginForm("RemoveFlavor", "Treats"))  
+        {
+          @Html.Hidden("treatId", flavorTreat.TreatId)
+          @Html.Hidden("flavorTreatId", flavorTreat.FlavorTreatId);
+          <input type="submit" value="Remove Flavor" class="btn btn-danger" />
+        }
       }
     </li>
   }

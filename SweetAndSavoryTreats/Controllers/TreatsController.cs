@@ -110,6 +110,7 @@ namespace SweetAndSavoryTreats.Controllers
     }
 
     [HttpPost]
+    [Authorize]
     public ActionResult RemoveFlavor(int treatId, int flavorTreatId)
     {
       FlavorTreat thisFlavorTreat = _db.FlavorTreats.FirstOrDefault(flavorTreat => flavorTreat.FlavorTreatId == flavorTreatId);
